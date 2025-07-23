@@ -1,0 +1,643 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding-top: 45px; /* tránh che nội dung bởi navigator bar fixed */
+}
+
+
+
+.projects-container {
+    background-color: #007BFF;
+    color: white;
+}
+
+.skills-container {
+    background-color: #fff3cd;
+    color: #212529;
+}
+
+/*<!-- ---------------------------- STYLE ---------------------------- -->*/
+.img-hover-zoom {
+    transition: transform 0.4s ease;
+}
+
+.img-hover-zoom:hover {
+        transform: scale(1.05);
+}
+
+
+.icon-btn {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.icon-btn .desc {
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    background: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-btn:hover .desc {
+    opacity: 1;
+}
+
+/*body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: black;
+    color: #26588e;
+}*/
+
+
+.light-theme-home {
+    background-color: #1e3e61;
+    color: white;
+}
+.dark-theme-home {
+    background-color: #a8d2fe;
+    color: black;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+.square-image {
+    width: 370px; /* Đặt chiều rộng cố định */
+    height: 370px; /* Đặt chiều cao bằng với chiều rộng để thành hình vuông */
+    object-fit: cover; /* Cắt ảnh sao cho vừa khung mà không méo */
+    border: 2px solid #333; /* Tùy chọn: tạo viền khung */
+    border-radius: 8px; /* Tùy chọn: bo góc khung */
+}
+
+
+/*<!-- ---------------------------- DESCRIPTION TRANSITION ---------------------------- -->*/
+.image-box {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+    .image-box img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    .image-box:hover img {
+        transform: scale(1.1);
+    }
+
+.description {
+    position: absolute;
+    top: 150%;
+    left: 60px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s ease, left 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.image-box:hover .description {
+    opacity: 1;
+    left: -180px;
+}
+
+.bottom-text {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px revert-layer #555;
+}
+
+.bottom-desc {
+    visibility: hidden;
+    width: 240px;
+    background-color: #5b959f;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* position above the text */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.bottom-text:hover .bottom-desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+.right-text {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px revert-layer #555;
+}
+
+.right-desc {
+    visibility: hidden;
+    width: 240px;
+    background-color: #5b959f;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 130%; 
+    left: 25%;
+    transform: translateX(0%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.right-text:hover .right-desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*<!-- ---------------------------- HOME ---------------------------- -->*/
+#home-container {
+    padding: 4rem;
+    background-color: #2a5685;
+    background: linear-gradient(90deg, #0a121c, #4a6f97);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+#home-space {
+    background-color: #1e3e61;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; /* Canh giữa theo chiều dọc */
+    padding-left: 70px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 50px;
+}
+#home-introduce {
+    background-color: #1e3e61;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; /* Canh giữa theo chiều dọc */
+    padding-left: 70px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 50px;
+}
+#home-avatar {
+    background-color: #1e3e61;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+}
+.home_navigator {
+
+    padding: 10px;
+}
+#overview {
+    padding: 7rem;
+    background-color: #1e3e61; /* Màu đen chính */
+}
+
+#portfolio {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dev {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*<!-- ---------------------------- ABOUT ---------------------------- -->*/
+.about-navigator {
+
+    padding: 10px;
+}
+
+#about-container {
+    padding: 8rem;
+    padding-bottom: 3px;
+    background-color: #0f0a17;
+    background: linear-gradient(90deg, #0f0a17, #a461c3);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.education_title {
+    background-color: #341e37; 
+    padding: 10rem;
+    padding-bottom: 40px; 
+}
+
+
+
+
+#university-space {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; /* Canh giữa theo chiều dọc */
+    padding-left: 70px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 50px;
+}
+
+#university-picture {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+}
+
+#university-introduce {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Canh giữa theo chiều dọc */
+    padding-left: 0px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 90px;
+    padding-right: 70px;
+}
+
+#space {
+    background-color: #341e37;
+    padding: 4rem;
+    padding-bottom: 4px;
+}
+
+#GPA-space {
+    background-color: #341e37;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: right; /* Canh giữa theo chiều dọc */
+    padding-left: 70px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 50px;
+}
+
+#GPA-introduce {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Canh giữa theo chiều dọc */
+    padding-left: 0px; /* Nếu muốn có padding bên trong cột */
+    padding-top: 80px;
+    padding-right: 70px;
+}
+
+#GPA-picture {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+}
+
+#GPA-icon {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+}
+
+#GPA-icon {
+    border: 3px solid white; /* Độ dày, kiểu và màu viền */
+    padding: 0px; /* Khoảng cách giữa nội dung và viền */
+    margin: 15px; /* Khoảng cách với phần tử khác */
+}
+
+#CV {
+    padding-top: 40px;
+}
+
+#work {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+    border: 3px solid white; /* Độ dày, kiểu và màu viền */
+    padding: 0px; /* Khoảng cách giữa nội dung và viền */
+    margin: 0px; /* Khoảng cách với phần tử khác */
+}
+
+
+#workspace {
+    background-color: #341e37;
+    padding: 1rem;
+    padding-bottom: 5px;
+}
+
+#work-space {
+    background-color: #341e37;
+    padding: 12rem;
+    padding-bottom: 7px;
+}
+
+#highlight {
+    background-color: #341e37;
+    /*background: linear-gradient(135deg, #6a0dad, #8a2be2);*/ /* Gradient tím */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    padding-top: 50px; /* Nếu muốn có padding bên trong cột */
+
+}
+
+
+#about-container {
+    padding: 5rem;
+    padding-bottom: 4rem;
+    background-color: #0f0a17;
+    background: linear-gradient(90deg, #0f0a17, #a461c3);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/*<!----------------------------- SKILLS ---------------------------- -->*/
+
+#skills-container {
+    padding: 5rem;
+    background-color: #0d2023; /*Màu đen chính */
+    background: linear-gradient(135deg, #0d2023, #33747f);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skills-navigator {
+        padding: 10px;
+}
+
+.skill_title {
+    background-color: #0d2023;
+    padding: 10rem;
+    padding-bottom: 40px;
+}
+
+#skill-space {
+    background-color: #0d2023; /*Màu đen chính */
+    background: linear-gradient(135deg, #0d2023, #33747f);
+    color: white;
+    padding: 5rem;
+    padding-bottom: 4px;
+}
+
+#skill-space2 {
+    background-color: #0d2023;
+    padding: 5rem;
+    padding-bottom: 2px;
+    color: white;
+}
+
+#skill-list {
+    background-color: #0d2023;
+    padding: 1rem;
+    padding-left: 5rem;
+    color: white; 
+}
+
+/*<!-- ---------------------------- PROJECTS ---------------------------- -->*/
+
+
+#projects-container {
+    padding: 5rem;
+    background-color: #15160c;
+    background: linear-gradient(135deg, #15160c, #e8ee6f);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.projects-navigator {
+    padding: 10px;
+}
+
+.projects_title {
+    background-color: #262813;
+    padding: 9rem;
+    padding-bottom: 4px;
+}
+
+#project-carousel {
+    background-color: #262813;
+    padding: 12rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+}
+
+.caption-below {
+    color: #fff;
+    padding: 10px;
+}
+
+
+/*<!------------------------------ CONTACT ---------------------------- -->*/
+#contact-container {
+    padding: 0rem;
+    background-color: #2a5685;
+    background: linear-gradient(90deg, #0a121c, #4a6f97);
+    color: white;
+    border-radius: 0px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-navigator {
+    padding: 10px;
+}
+
+#contact-title {
+    background-color: #1e3e61;
+    padding: 10rem;
+    padding-bottom: 4px;
+}
+
+#contact-info {
+    background-color: #1e3e61;
+    padding: 5rem;
+    padding-bottom: 4px;
+    color: white;
+}
+
+.info-box {
+    background-color: #092341;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin: 13px 0;
+}
+
+#contact-form {
+    background-color: #1e3e61;
+    padding: 6rem;
+    padding-top: 4rem;
+    
+}
+
+#contact-space {
+    background-color: #1e3e61;
+    padding: 0rem;
+    padding-bottom: 10rem;
+}
+
+
+
+
+.icon {
+    color: #646cff;
+    font-size: 35px;
+    margin-right: 20px;
+
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    background-color: #1c1c2e;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+        color: #aaa;
+}
+
+#contact-form button {
+    background-color: #646cff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-form button:hover {
+        background-color: #7c7cff;
+}
+
+
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
