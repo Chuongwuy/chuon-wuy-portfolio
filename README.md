@@ -12,4 +12,4 @@ My portfolio website contains 5 main sections
 3. Skills: Showcases my abilities, level of proficiency.
 4. Projects: Showcases my relevant projects. 
 5. Contact: Ways to get in touch with me. If you have any questions or inquiries, please feel free to reach out to me through the contact information provided in the website or by using the contact form.
-![ github ](assets/images/github.png)
+![ github ](wwwroot/images/github.png)
